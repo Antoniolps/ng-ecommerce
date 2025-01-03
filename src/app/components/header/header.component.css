@@ -1,0 +1,59 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 10px;
+}
+
+
+.logo img {
+    height: 100px; 
+    width: auto;
+}
+
+
+.nav ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #517383;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #09212b; 
+}
+
+
+.actions {
+    display: flex;
+    gap: 16px;
+}
+
+/* Estilo geral para os ícones */
+.btn-icon {
+    font-size: 22px; /* Tamanho do ícone */
+    color: #517383; /* Cor do ícone */
+    cursor: pointer; /* Mostra o cursor de link */
+    margin-left: 16px; /* Espaçamento entre os ícones */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.btn-icon:hover {
+    color: #09212b; /* Cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta levemente o ícone */
+}
+

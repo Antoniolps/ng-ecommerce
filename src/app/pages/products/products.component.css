@@ -1,0 +1,48 @@
+.container {
+    background-color: #fff;
+}
+
+.title {
+    margin: 10px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
+}
+
+.col {
+    flex: 1 1 calc(25% - 16px);
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+app-product {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+@media (max-width: 992px) {
+    .col {
+        flex: 1 1 calc(33.333% - 16px); /* 3 produtos por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .col {
+        flex: 1 1 calc(50% - 16px); /* 2 produtos por linha */
+    }
+}
+
+@media (max-width: 576px) {
+    .col {
+        flex: 1 1 100%; /* 1 produto por linha */
+    }
+}
