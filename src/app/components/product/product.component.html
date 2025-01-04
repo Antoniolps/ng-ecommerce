@@ -1,6 +1,7 @@
-<div class="container">
+<div class="container" (click)="openProduct(product.id)">
     <img class="product-image" [src]="product.image" [alt]="product.title">
-    <h3 class="product-title tooltip" [title]="product.title">{{ product.title }}</h3>
+    <h3 class="product-title" [title]="product.title">{{ product.title }}</h3>
+    <p>{{product.category}}</p>
     <p>⭐ {{product.rating?.rate + " | " + product.rating?.count}} avaliações</p>
-    <p>R${{product.price}}</p>
+    <p>R$ {{product.price}}</p>
 </div>

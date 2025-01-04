@@ -25,3 +25,9 @@ img.product-image {
     line-clamp: 1; 
     text-overflow: ellipsis; 
 }
+
+.container p:last-of-type {
+    font-weight: 600;
+    color: #e63946; 
+    margin-top: 16px;
+}

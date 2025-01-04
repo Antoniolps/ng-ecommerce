@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="col">
+        <img class="product-image" [src]="product.image" [alt]="product.title">
+    </div>
+    <div class="col">
+        <div class="row">
+            <h3 class="product-title">{{ product.title }}</h3>
+            <p>{{product.description}}</p>
+            <p>{{product.category}}</p>
+            <p>⭐ {{product.rating?.rate + " | " + product.rating?.count}} avaliações</p>
+            <p>R$ {{product.price}}</p>
+        </div>
+        <!-- <div class="row">
+            <button class="btn" (click)="addToCart(product)">Adicionar ao carrinho</button>
+        </div> -->
+    </div>
+</div>

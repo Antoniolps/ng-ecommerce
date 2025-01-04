@@ -3,6 +3,7 @@ import { ProductComponent } from '../../components/product/product.component';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductsComponent {
   products: Product[] = [];
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService, private router: Router) {
    
   }
 
@@ -21,4 +22,5 @@ export class ProductsComponent {
       this.products = products;
     });
   }
+
 }

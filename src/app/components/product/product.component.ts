@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../../models/product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -10,8 +11,12 @@ import { Product } from '../../models/product';
 export class ProductComponent {
   @Input() product!: Product;
   
-  constructor() {
+  constructor(private router: Router) {
     
+  }
+
+  openProduct(id?: number) : void {
+    this.router.navigate(['/product', id]);
   }
 
 }

@@ -15,6 +15,7 @@
 .logo img {
     height: 100px; 
     width: auto;
+    cursor: pointer;
 }
 
 
