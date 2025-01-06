@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { Product } from '../../models/product';
-import { ProductService } from '../../services/product.service';
+import { ProductService } from '../../services/api/product.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-page',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.css'
 })
 export class ProductPageComponent {
-  product!: Product;
+  product?: Product;
   productID!: number;
 
   constructor(private productService: ProductService, private route: ActivatedRoute) {
@@ -23,8 +24,10 @@ export class ProductPageComponent {
   }
 
   getProduct(id: number) {
-    this.productService.getProduct(id).subscribe((product) => {
-      this.product = product;
+    this.productService.getProduct(id).subscribe({
+      next: (data) => {
+        this.product = data;
+      },
     });
   }
 
