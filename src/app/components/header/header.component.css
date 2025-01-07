@@ -36,30 +36,47 @@
 .nav a {
     text-decoration: none;
     color: #517383;
+    padding: 5px;
     font-size: 22px;
-    transition: color 0.3s;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
 }
 
 .nav a:hover {
-    color: #09212b; 
+    font-weight: bold;
+    background-color: #e3f2fd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.active-link {
+    font-weight: bold;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
 
 .actions {
     display: flex;
-    gap: 16px;
+    gap: 32px;
 }
 
 .btn-icon {
-    font-size: 22px; 
-    color: #517383; 
-    cursor: pointer; 
-    margin-left: 16px; 
-    transition: color 0.3s, transform 0.3s;
+    font-size: 22px;
+    color: #517383;
+    cursor: pointer;
+    padding: 5px; 
+    border-radius: 10px; 
+    transition: all 0.2s ease; 
 }
 
 .btn-icon:hover {
-    color: #09212b; 
-    transform: scale(1.1); 
+    font-weight: bold;
+    background-color: #e3f2fd;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 

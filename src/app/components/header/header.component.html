@@ -5,15 +5,15 @@
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a routerLink='/products'>Produtos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a routerLink='/' routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+                <li><a routerLink='/products' routerLinkActive="active-link">Produtos</a></li>
+                <li><a routerLink='/about' routerLinkActive="active-link">Sobre</a></li>
+                <li><a routerLink='/contact' routerLinkActive="active-link">Contato</a></li>
             </ul>
         </nav>
     </div>
     <div class="actions">
-        <span title="Carrinho" class="material-icons btn-icon" title="Carrinho">shopping_cart</span>
-        <span title="Login" class="material-icons btn-icon" title="Login">person</span>
+        <span title="Carrinho" class="material-icons btn-icon">shopping_cart</span>
+        <span title="Login" class="material-icons btn-icon">person</span>
     </div>
 </header>

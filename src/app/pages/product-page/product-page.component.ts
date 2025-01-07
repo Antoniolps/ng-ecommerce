@@ -3,10 +3,11 @@ import { Product } from '../../models/product';
 import { ProductService } from '../../services/api/product.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { StarRatingComponent } from '../../components/star-rating/star-rating.component';
 
 @Component({
   selector: 'app-product-page',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule, StarRatingComponent],
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.css'
 })

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="star-rating">
+        <ng-container *ngFor="let star of stars; let i = index">
+            <span class="material-icons" [ngClass]="{
+          'filled': star === 'full',
+          'half': star === 'half',
+          'empty': star === 'empty'
+        }">
+                {{ star === 'half' ? 'star_half' : 'star' }}
+            </span>
+        </ng-container>
+    </div>
+    <p>{{ rating?.count }} avaliações</p>
+</div>

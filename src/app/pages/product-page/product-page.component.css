@@ -1,5 +1,6 @@
 .container {
     display: flex; 
+    flex-direction: column; 
     align-items: flex-start; 
     gap: 24px; 
     max-width: 1200px;
@@ -8,6 +9,36 @@
     background-color: #fff; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 8px; 
+    position: relative; 
+}
+
+.btn-voltar {
+    position: absolute; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+    padding: 8px 12px; 
+    font-size: 16px; 
+    font-weight: 500; 
+    color: #517383; 
+    text-decoration: none; 
+    border: 1px solid transparent; 
+    border-radius: 5px; 
+    transition: all 0.2s ease; 
+    cursor: pointer; 
+}
+
+.btn-voltar:hover {
+    font-weight: bold;
+    background-color: #e3f2fd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%; 
 }
 
 .product-image {
@@ -18,7 +49,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-
 .product-title {
     font-size: 24px;
     font-weight: 700;
@@ -26,24 +56,26 @@
     color: #333;
 }
 
-.container p {
+.product-container p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 12px;
     color: #555;
 }
 
-
-.container p:last-of-type {
+.product-container p:last-of-type {
     font-size: 20px;
     font-weight: 600;
     color: #e63946; 
     margin-top: 16px;
 }
 
+.actions {
+    margin-bottom: 20px;
+}
 
 @media (max-width: 768px) {
-    .container {
+    .product-container {
         flex-direction: column; 
         align-items: center; 
     }

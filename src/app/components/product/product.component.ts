@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../../models/product';
 import { Router } from '@angular/router';
+import { StarRatingComponent } from '../star-rating/star-rating.component';
+
 
 @Component({
   selector: 'app-product',
-  imports: [],
+  imports: [StarRatingComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
@@ -16,7 +18,7 @@ export class ProductComponent {
   }
 
   openProduct(id?: number) : void {
-    this.router.navigate(['/product', id]);
+    this.router.navigate(['/products', id]);
   }
 
 }

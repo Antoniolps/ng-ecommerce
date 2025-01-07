@@ -2,6 +2,6 @@
     <img class="product-image" [src]="product.image" [alt]="product.title">
     <h3 class="product-title" [title]="product.title">{{ product.title }}</h3>
     <p>{{product.category}}</p>
-    <p>⭐ {{product.rating?.rate + " | " + product.rating?.count}} avaliações</p>
-    <p>R$ {{product.price}}</p>
+    <p [title]="product.rating?.rate"><app-star-rating [rating]="product?.rating"></app-star-rating></p>
+    <p>R$ {{product.price?.toFixed(2)}}</p>
 </div>

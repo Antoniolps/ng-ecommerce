@@ -8,7 +8,7 @@ export class Product {
     image?: string;
 }
 
-class Rating{
+export class Rating{
     count?: number;
     rate?: number;
 }
