@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from '../../models/product';
+import { Product, CartProduct } from '../../models/product';
 import { ProductService } from '../../services/api/product.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -16,7 +16,7 @@ export class ProductPageComponent {
   productID!: number;
 
   constructor(private productService: ProductService, private route: ActivatedRoute) {
-    
+
   }
 
   ngOnInit() {
@@ -32,8 +32,33 @@ export class ProductPageComponent {
     });
   }
 
-  addToCart(product: Product) {
-    localStorage.setItem('cart', JSON.stringify(product));
+  //This method will be used to handle if the product will be added to the local cart or the API cart.
+  addToCart(product: Product): void {
+    this.addToLocalCart(product);
   }
-  
+
+  addToLocalCart(product: Product) {
+    let cart = localStorage.getItem('cart');
+
+    if (!cart) {
+      cart = '[]';
+    }
+
+    let cartArray = JSON.parse(cart);
+    let productIndex = cartArray.findIndex((c: CartProduct) => c.product.id === product.id);
+
+    if (productIndex === -1) {
+      let newProduct = new CartProduct(product, 1);
+      cartArray.push(newProduct);
+      console.log('Product added to cart:', product);
+    } else {
+      cartArray[productIndex].quantity++;
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cartArray));
+  }
+
 }
+
+
+

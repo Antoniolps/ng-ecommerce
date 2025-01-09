@@ -5,19 +5,25 @@
             Voltar
         </a>
     </div>
-
     <div class="product-container">
         <div class="col">
-            <img class="product-image" [src]="product?.image" [alt]="product?.title">
+            <img class="product-image" [src]="product.image" [alt]="product.title">
         </div>
         <div class="col">
             <div class="row">
-                <h3 class="product-title">{{ product?.title }}</h3>
-                <p>{{product?.description}}</p>
-                <p>{{product?.category}}</p>
-                <p [title]="product.rating?.rate"><app-star-rating [rating]="product?.rating"></app-star-rating></p>
-                <p>R$ {{product?.price?.toFixed(2)}}</p>
+                <h3 class="product-title">{{ product.title }}</h3>
+                <p>{{product.description}}</p>
+                <p>{{product.category}}</p>
+                <p [title]="product.rating?.rate"><app-star-rating [rating]="product.rating"></app-star-rating></p>
+                <p>R$ {{product.price?.toFixed(2)}}</p>
             </div>
         </div>
+    </div>
+    <div class="actions">
+        <button (click)="addToCart(product)">
+            <span class="material-icons"> shopping_cart </span>
+            Adicionar ao carrinho
+        </button>
+        
     </div>
 </div>
