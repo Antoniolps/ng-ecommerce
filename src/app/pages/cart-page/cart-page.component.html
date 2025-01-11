@@ -1,15 +1,25 @@
 <div class="container" *ngIf="cart.length > 0">
+    <h2>Cart</h2>
     <div class="products" *ngFor="let cartItem of cart">
         <div class="product">
             <div class="product-image">
                 <img [src]="cartItem.product.image" [alt]="cartItem.product.title" />
             </div>
             <div class="product-details">
-                <h3>{{cartItem.product.title}}</h3>
-                <p>{{cartItem.product.price}}</p>
-                <p>Quantity: {{cartItem.quantity}}</p>
-                <button class="btn btn-danger">Remove</button>
+                <h3>{{ cartItem.product.title }}</h3>
+                <p>Price: R$ {{ cartItem.product.price }}</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-container">
+                    <button class="btn-quantity"><span class="material-icons"> remove </span></button>
+                    <span class="quantity">{{ cartItem.quantity }}</span>
+                    <button class="btn-quantity"><span class="material-icons"> add </span></button>
+                </div>
+                <button class="btn-danger"><span class="material-icons"> delete </span></button>
             </div>
         </div>
+    </div>
+    <div class="subtotal">
+        Subtotal ({{ cart.length }} products): R$ {{cartSum}}<span></span>
     </div>
 </div>

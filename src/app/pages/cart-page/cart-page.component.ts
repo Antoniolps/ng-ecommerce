@@ -11,6 +11,7 @@ import { CartProduct } from '../../models/product';
 export class CartPageComponent {
 
   cart: CartProduct[] = [];
+  cartSum: number = 0;
 
   ngOnInit() {
     let cart = localStorage.getItem('cart');
@@ -18,5 +19,16 @@ export class CartPageComponent {
     if(cart){
       this.cart = JSON.parse(cart);
     }
+
+    this.calculateCartSum();
+  }
+
+  calculateCartSum() {
+    this.cartSum = this.cart.reduce((sum, product) => {
+      if (product.product && product.product.price) {
+        return sum + product.product.price * product.quantity;
+      }
+      return sum;
+    }, 0);
   }
 }
