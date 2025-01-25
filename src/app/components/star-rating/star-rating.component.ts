@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges } from '@angular/core';
-import { Rating } from '../../models/product';
+import { Rating } from '../../models/product/Product';
 
 @Component({
   selector: 'app-star-rating',
