@@ -11,15 +11,9 @@ import { JwtService } from './jwt.service';
   providedIn: 'root'
 })
 export class AuthService {
-  public avail: boolean = false;
-  public msg: string = '';
-
   private isAuthenticated = false;
-  private redirectUrl: string | null = null;
   private authToken: string | null = null;
-  private siteKey = '';
-  private secretKey = '';
-
+  
   private readonly TOKEN_KEY = 'token_Data';
   private readonly USER_DATA_KEY = 'USER_Data';
   private readonly SESSION_EXPIRY_KEY = 'sessionExpiryData';
@@ -49,11 +43,11 @@ export class AuthService {
 
   private setUserSession(authData: Auth): void {
     if (authData.token) {
-      const tokenPayload = this.jwtService.decodeToken(authData.token);
+      const decodedToken = this.jwtService.decodeToken(authData.token);
       const data = {
-        name: tokenPayload.user,
+        name: decodedToken.user,
         token: authData.token,
-        userId: tokenPayload.sub,
+        userId: decodedToken.sub,
       };
 
       this.authToken = authData.token;
