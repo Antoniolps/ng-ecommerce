@@ -11,14 +11,13 @@ import { JwtService } from './jwt.service';
   providedIn: 'root'
 })
 export class AuthService {
-  private isAuthenticated = false;
-  private authToken: string | null = null;
-  
   private readonly TOKEN_KEY = 'token_Data';
   private readonly USER_DATA_KEY = 'USER_Data';
   private readonly SESSION_EXPIRY_KEY = 'sessionExpiryData';
   private readonly SESSION_DURATION = 5 * 24 * 60 * 60 * 1000; // 5 days
   
+  private isAuthenticated = false;
+  private authToken: string | null = null;
 
   constructor(
     private jwtService: JwtService,
@@ -95,6 +94,10 @@ export class AuthService {
 
   getToken(): string | null {
     return sessionStorage.getItem(this.TOKEN_KEY) || localStorage.getItem(this.TOKEN_KEY);
+  }
+
+  getUser(): any | null {
+    return sessionStorage.getItem(this.USER_DATA_KEY) || localStorage.getItem(this.USER_DATA_KEY);
   }
 
   logout(): void {
