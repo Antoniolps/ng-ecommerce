@@ -6,6 +6,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
 export const routes: Routes = [
     {
         path: 'products',
+        title: 'Produtos',
         component: ProductsComponent,
     },
     {
@@ -14,6 +15,7 @@ export const routes: Routes = [
     },
     {
         path: 'cart',
+        title: 'Meu Carrinho',
         component: CartPageComponent,
     }
 ];
