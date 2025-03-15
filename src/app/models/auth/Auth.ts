@@ -1,3 +1,3 @@
-export class Auth{ 
-    token?: string;
+export interface Auth{ 
+    token: string;
 }
