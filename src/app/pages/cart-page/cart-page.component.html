@@ -1,5 +1,5 @@
 <div class="container" *ngIf="cart.length > 0">
-    <h2>Cart</h2>
+    <h2>Meu carrinho</h2>
     <div class="products" *ngFor="let cartItem of cart">
         <div class="product">
             <div class="product-image">
@@ -15,7 +15,12 @@
                     <span class="quantity">{{ cartItem.quantity }}</span>
                     <button class="btn-quantity"><span class="material-icons"> add </span></button>
                 </div>
-                <button class="btn-danger"><span class="material-icons"> delete </span></button>
+
+                <button class="btn-danger">
+                    <span class="material-icons"> delete </span>
+                    Remover
+                </button>
+
             </div>
         </div>
     </div>
