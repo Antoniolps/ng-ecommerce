@@ -1,7 +1,7 @@
 <div class="container" *ngIf="cart.length > 0">
     <h2>Meu carrinho</h2>
     <div class="products" *ngFor="let cartItem of cart">
-        <div class="product">
+        <div class="product" (click)="goToProduct(cartItem.product)">
             <div class="product-image">
                 <img [src]="cartItem.product.image" [alt]="cartItem.product.title" />
             </div>
@@ -16,7 +16,7 @@
                     <button class="btn-quantity"><span class="material-icons"> add </span></button>
                 </div>
 
-                <button class="btn-danger">
+                <button class="btn-danger" (click)="removeFromCart(cartItem)">
                     <span class="material-icons"> delete </span>
                     Remover
                 </button>
@@ -26,5 +26,13 @@
     </div>
     <div class="subtotal">
         Subtotal ({{ cart.length }} products): R$ {{cartSum}}<span></span>
+    </div>
+</div>
+<div class="empty-cart" *ngIf="cart.length === 0">
+    <div class="empty-content">
+        <span class="material-icons empty-icon">shopping_cart</span>
+        <h2>Seu carrinho está vazio</h2>
+        <p>Adicione produtos para começar sua compra.</p>
+        <a (click)="goToProducts()" class="btn-empty-cart">Ver produtos</a>
     </div>
 </div>

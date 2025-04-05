@@ -1,20 +1,20 @@
 .container {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    gap: 24px; 
+    gap: 24px;
     max-width: 70%;
-    margin: 20px auto; 
+    margin: 20px auto;
     padding: 16px;
-    background-color: #fff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px; 
-    position: relative; 
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
 }
 
 .products {
     border-bottom: 1px solid #ddd;
     width: 100%;
-    
+
 }
 
 .product {
@@ -33,12 +33,12 @@
 .product-image img {
     width: 200px;
     height: 150px;
-    object-fit: contain; 
+    object-fit: contain;
     border-radius: 8px;
     margin-bottom: 16px;
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9;
     display: block;
-    padding: 8px; 
+    padding: 8px;
 }
 
 .product-details {
@@ -156,12 +156,12 @@
         padding: 6px 12px;
         min-width: 30px;
     }
-    
+
     .btn-quantity {
         min-width: 32px;
         min-height: 32px;
     }
-    
+
     .btn-quantity .material-icons {
         font-size: 16px;
     }
@@ -172,3 +172,59 @@
         padding: 7px 10px;
     }
 }
+
+.empty-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 70%;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.empty-icon {
+    font-size: 64px;
+    color: #ccc;
+}
+
+.empty-content h2 {
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+}
+
+.empty-content p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.btn-empty-cart {
+    text-decoration: none;
+    color: #517383;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-empty-cart:hover {
+    font-weight: bold;
+    background-color: #e3f2fd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+

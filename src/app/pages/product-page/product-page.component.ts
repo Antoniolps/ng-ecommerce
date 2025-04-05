@@ -42,6 +42,7 @@ export class ProductPageComponent {
   //This method will be used to handle if the product will be added to the local cart or the API cart.
   addToCart(product: Product): void {
     this.addToLocalCart(product);
+    alert('Product added to cart!');
   }
 
   addToLocalCart(product: Product) {
