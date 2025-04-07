@@ -93,13 +93,11 @@
 .subtotal {
     width: 100%;
     text-align: right;
+    display: flex;
+    justify-content: space-between;
     font-size: 16px;
     font-weight: bold;
     margin: 10px 0 10px 0;
-}
-
-.subtotal span {
-    color: #ff9900;
 }
 
 .quantity-container {

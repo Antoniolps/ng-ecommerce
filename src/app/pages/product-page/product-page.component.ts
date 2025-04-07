@@ -5,6 +5,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { StarRatingComponent } from '../../components/star-rating/star-rating.component';
 import { Title } from '@angular/platform-browser';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-product-page',
@@ -19,7 +20,8 @@ export class ProductPageComponent {
   constructor(
     private productService: ProductService, 
     private route: ActivatedRoute,
-    private titleService: Title
+    private titleService: Title,
+    private toastrService: ToastrService
   ) {
 
   }
@@ -42,7 +44,7 @@ export class ProductPageComponent {
   //This method will be used to handle if the product will be added to the local cart or the API cart.
   addToCart(product: Product): void {
     this.addToLocalCart(product);
-    alert('Product added to cart!');
+    this.toastrService.success('Produto adicionado ao carrinho', 'Carrinho 🛒');
   }
 
   addToLocalCart(product: Product) {
