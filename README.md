@@ -10,7 +10,6 @@ O **NG-Ecommerce** é uma aplicação web moderna que simula uma loja virtual, i
 
 - Análise das funcionalidades principais do Angular 19
 - Implementação de padrões de arquitetura modular
-- Estudo de interceptors e gerenciamento de estado
 - Aplicação de boas práticas de desenvolvimento frontend
 - Implementação de interfaces responsivas e modernas
 
@@ -30,7 +29,6 @@ O **NG-Ecommerce** é uma aplicação web moderna que simula uma loja virtual, i
 
 ### Ferramentas de Desenvolvimento
 - **Angular CLI 19** - Interface de linha de comando
-- **Karma + Jasmine** - Framework de testes
 - **TypeScript** - Tipagem estática
 
 ## 🏗️ Arquitetura do Projeto
